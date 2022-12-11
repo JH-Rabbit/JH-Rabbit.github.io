@@ -1,0 +1,70 @@
+/* hoverbox.css*/
+*{
+    border:0;
+    margin:0;
+    padding:0;
+}
+/* =Basic HTML,Non-essential */
+
+a{text-decoration: none;}
+    div{
+        width:1000px;
+        height:60px;
+        margin-left: 10px;
+        padding:0px;
+        text-align:left;
+        float:left;
+    }
+    body{
+        position:relative;
+        text-align:left;
+        float:left;
+    }
+    h1{
+        background:inherit;
+        border-bottom: 0px dashed;
+        font:17px Georgia,serif;
+        margin:0 0 10px;
+        padding:0 0 10px;
+        text-align:left;
+    }
+
+    .hoverbox{cursor:default;list-style:none;}
+    .hoverbox a{cursor:default;}
+    .hoverbox a .preview{display:none;}
+    .hoverbox a:hover .preview{
+        display:block;
+        position:absolute;
+        top:-33px;
+        left:-45px;
+        z-index:1;
+    }
+    .hoverbox img{
+        background:#fff;
+        border-color: #aaa #ccc #ddd #bbb;
+        border-style:solid;
+        border-width:1px;
+        color:inherit;
+        padding:2px;
+        vertical-align:top;
+        width:139px;
+        height:90px;
+    }
+    .hoverbox li{
+        background:#eee;
+        border-color: #ddd #bbb #aaa #ccc;
+        border-style: solid;
+        border-width: 1px;
+        color:inherit;
+        float:left;
+        display:inline;
+        margin:3px;
+        padding:5px;
+        position:relative;
+    }
+    .hoverbox .preview{
+        border-color: #000;
+        width:200px;
+        height:150px;
+    }
+    ul{padding:0px;margin:0 auto;}

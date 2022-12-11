@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+h5{
+    border:none;
+    color:white;
+    background:rgb(52, 48, 48);
+    width: 57px;
+    height: 25px;
+    float: left;
+    text-align: center;
+    margin: 0;
+}
+.t4{
+    background-color: gray;height:30px;
+}
+.t5{
+    background-color: rgb(82, 79, 79);height:30px;
+}
+.t6{
+    border-collapse: collapse;
+    margin:5px;
+    width:96%;
+}
+.t7{
+    width:20%;
+}
+.t8{width:60%;}
+.conten{
+    border: 1px solid gray;
+    background-color: rgb(92, 92, 92);
+    width: 350px;
+    height:380px ;
+}
+.heads{
+    margin-left:5px;
+}
+.conten div{
+    display: none;
+}
+.current{
+    background-color: gray;
+}	
+.conten .show{
+    display: block;
+    color:white;
+}	
+</style>
+</head>
+<body>
+<div class="heads">
+<h5 class="current" onclick="changeText(0)" >车手积分</h5>
+<h5 onclick="changeText(1)">车队积分</h5>
+<h5></h5>
+<h5></h5>
+<h5></h5>
+<h5></h5>
+</div>
+<div class="conten">
+<div class="show">
+    <table class="t6">
+        <tr align="left" class="t4">
+            <th>排名</th>
+            <th>名字</th>
+            <th>积分</th>
+        </tr>
+        <tr align="left" class="t5">
+            <td class="t7">1</td>
+            <td class="t8">塞巴斯蒂安.维特尔</td>
+            <td>68</td>
+        </tr>
+        <tr align="left" class="t4">
+            <td>2</td>
+            <td>刘易斯.汉密尔顿</td>
+            <td>47</td>
+        </tr>
+        <tr align="left" class="t5">
+            <td>3</td>
+            <td>建森.巴顿</td>
+            <td>38</td>
+        </tr>
+        <tr align="left" class="t4">
+            <td>4</td>
+            <td>马克.韦伯</td>
+            <td>37</td>
+        </tr>
+        <tr align="left" class="t5">
+            <td>5</td>
+            <td>费奥南多.阿隆索</td>
+            <td>26</td>
+        </tr>
+        <tr align="left" class="t4">
+            <td>6</td>
+            <td>维塔利.佩德罗夫</td>
+            <td>17</td>
+        </tr>
+        <tr align="left" class="t5">
+            <td>7</td>
+            <td>Sergio Perez</td>
+            <td>6</td>
+        </tr>
+    </table>
+</div>
+<div>
+    <table class="t6">
+        <tr align="left" class="t4">
+            <th>排名</th>
+            <th>名字</th>
+            <th>积分</th>
+        </tr>
+        <tr align="left" class="t5">
+            <td class="t7">1</td>
+            <td class="t8">RED BULL RACING</td>
+            <td>340</td>
+        </tr>
+        <tr align="left" class="t4">
+            <td>2</td>
+            <td>FERRARI</td>
+            <td>278</td>
+        </tr>
+        <tr align="left" class="t5">
+            <td>3</td>
+            <td>MERCEDES-AMG</td>
+            <td>210</td>
+        </tr>
+        <tr align="left" class="t4">
+            <td>4</td>
+            <td>McLAREN</td>
+            <td>73</td>
+        </tr>
+        <tr align="left" class="t5">
+            <td>5</td>
+            <td>ALPINE</td>
+            <td>70</td>
+        </tr>
+        <tr align="left" class="t4">
+            <td>6</td>
+            <td>ALFA ROMEO</td>
+            <td>51</td>
+        </tr>
+        <tr align="left" class="t5">
+            <td>7</td>
+            <td>ALPHATAURI</td>
+            <td>27</td>
+        </tr>
+        <tr align="left" class="t4">
+            <td>8</td>
+            <td>HAAS</td>
+            <td>22</td>
+        </tr>
+        <tr align="left" class="t5">
+            <td>9</td>
+            <td>ASTON MARTIN</td>
+            <td>22</td>
+        </tr>
+        <tr align="left" class="t4">
+            <td>10</td>
+            <td>WILLIAMS</td>
+            <td>3</td>
+        </tr>
+    </table>
+</div>
+</div>
+<script type="text/javascript">
+    var h=document.getElementsByClassName("heads")[0].getElementsByTagName("h5");
+    var tex=document.getElementsByClassName("conten")[0].getElementsByTagName("div");
+    function changeText(index){
+        for (i=0;i<h.length;i++) {
+            if (i==index) {
+                h[i].className="current";
+                tex[i].className="show";
+            } else{
+                h[i].className="";
+                tex[i].className="";
+            }
+        }
+    }
+</script>
+</body>
+</html>

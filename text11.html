@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+	<head>
+		<meta charset="UTF-8">
+		<title>时间</title>
+		<style>
+ 
+		</style>
+	</head>
+ 
+	<body>
+		<div id="time"></div>
+		<script type="text/javascript">
+			function time() {
+				var vWeek, vWeek_s, vDay;
+				vWeek = ["周日/Sum", "周一/Mon", "周二/Tue", "周三/Wed", "周四/Thu", "周五/Fri", "周六/Sat"];
+				var date =  new Date();
+				year = date.getFullYear();
+				month = date.getMonth() + 1;
+				day = date.getDate();
+				hours = date.getHours();
+				minutes = date.getMinutes();
+				seconds = date.getSeconds();
+				vWeek_s = date.getDay();
+				document.getElementById("time").innerHTML = year + "年" + month + "月" + day + "日" + "\t" + hours + ":" + minutes + ":" + seconds + "\t" + vWeek[vWeek_s];
+ 
+			};
+			setInterval("time()", 1000);
+		</script>
+	</body>
+ 
+</html>

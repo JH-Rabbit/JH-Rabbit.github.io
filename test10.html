@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+	<head>
+		<meta charset="UTF-8">
+		<title>倒计时</title>
+		<!-- <script type="text/javascript" src="js_time.js"></script> -->
+        <style type="text/css">
+            .c1{color:white;text-align: center;}
+            .t1{text-align: center;width:270px;height:20px;}
+        </style>
+	</head>
+ 
+	<body onload="time();">
+		<div class="t1">  
+			<h3 class="c1">距离2023-F1巴林大奖赛 还有：</h3>
+			<span id="_d" class="c1">00</span>  
+			<span id="_h"class='c1'>00</span>  
+			<span id="_m" class="c1">00</span>  
+			<span id="_s" class="c1">00</span>  
+		</div> 
+		<!-- <a href="时间后台.html">后台</a> -->
+<script type="text/javascript">
+	var ddls="2023/3/5 20:00:00";
+	function time() {
+    var date = new Date();
+    var now= date.getTime();
+    //settime();
+    var ddl=ddls;
+    var endDate = new Date(ddl);
+    var end = endDate.getTime();
+
+    var leftTime = end-now;
+    var d,h,m,s;
+    if(leftTime>=0){
+        d = Math.floor(leftTime/1000/60/60/24);
+        h = Math.floor(leftTime/1000/60/60%24);
+        m = Math.floor(leftTime/1000/60%60);
+        s = Math.floor(leftTime/1000%60);
+    }
+     document.getElementById("_d").innerHTML = d+"天";  
+     document.getElementById("_h").innerHTML = h+"时";  
+     document.getElementById("_m").innerHTML = m+"分";  
+     document.getElementById("_s").innerHTML = s+"秒"; 
+     setInterval("time()", 1000);
+	};
+</script>
+	</body>
+ 
+</html>

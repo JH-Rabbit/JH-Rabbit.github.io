@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset = "utf-8" />
+
+        <style>
+            body{
+                align-items: left;
+                background-color: rgb(0, 0, 0);
+                color: white;
+            }
+            #main{
+                flex: 1;
+                width: 60%;
+            }
+            #typing{
+                flex: 1;
+                width: 80%;
+                height: 5vh;
+                border: rgb(122, 122, 122);
+                font-size:xx-large;
+            }
+            #commend{
+                flex: 1;
+                width: 80%;
+            }
+            #btn{
+                background-color: rgb(102, 102, 102);
+                color:azure
+            }
+            p{
+                background-color:black;
+            }
+            hr{width:100%;}
+        </style>
+
+    </head>
+
+    <body>
+        <div id="main">
+            <p>评论区</p><hr style="width: 20%;float:left;"><br>
+            <textarea id="typing"></textarea>
+            <button id="btn">发送评论</button>
+            <div id="commend"></div>
+        </div>
+        <div id="pinglun">
+            <div>
+                <div style="width: 30px; height: 30px;margin-top: 20px;float:left;margin-right: 10px;">
+                    <img src="F1赛车/256650_small_2.jpg" width="30" height="30" alt="">
+                    </div>
+                <div>
+            <div class="name">Ayrton:</div>
+            <div class="fayan">发个言，汉密尔顿与阿隆索谁比较强呢？</div>
+            <hr style="width: 48%;float:left">
+            <br>
+            <div class="fayan">Sun, 11 Dec 2022 08:08:15 GMT</div>
+        </div>
+        </div>
+            <br>
+            <div>
+                <div style="width: 30px; height: 30px;margin-top: 20px;float:left;margin-right: 10px;">
+                    <img src="F1赛车/402384_small_2.jpg" width="30" height="30" alt="">
+                    </div>
+                <div>
+            <div class="name">雪鸟：</div>
+            <div class="xfayan">芜湖！这个回放好看欸！
+                
+                <img src="F1赛车/2022阿布扎比正赛.png" width="120" height="80" alt="">
+            </div>
+            <hr style="width: 48%;float:left">
+            <br>
+            <div class="fayan">Sun, 11 Dec 2022 08:05105 GMT</div>
+        </div>
+        </div>
+    </div>
+    </body>
+
+    <script>
+        document.getElementById("btn").onclick=function(){send()};
+        function send(){
+            var g=new Date();
+            var value= document.getElementById("typing").value;
+            var p= document.createElement("p");
+            p.innerHTML="用户："+'<br>'+value+'<hr>'+g.toUTCString();
+            document.getElementById("commend").prepend(p);
+        }
+    </script>
+</html>
