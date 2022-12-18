@@ -30,8 +30,10 @@
 				else document.getElementById("time").innerHTML += ":" + "0" +minutes ;
 				if(seconds>=10)document.getElementById("time").innerHTML += ":" + seconds + "\t" + vWeek[vWeek_s];
 				else document.getElementById("time").innerHTML += ":" + "0" + seconds + "\t" + vWeek[vWeek_s];
+				
+				setInterval("time()", 1000);
 			};
-			setInterval("time()", 1000);
+			
 		</script>
 	</body>
  
