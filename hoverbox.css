@@ -8,9 +8,9 @@
 
 a{text-decoration: none;}
     div{
-        width:1000px;
+        width:990px;
         height:60px;
-        margin-left: 10px;
+        margin-left: 0 px;
         padding:0px;
         text-align:left;
         float:left;
@@ -19,17 +19,18 @@ a{text-decoration: none;}
         position:relative;
         text-align:left;
         float:left;
+        margin: 0 auto;
     }
     h1{
         background:inherit;
         border-bottom: 0px dashed;
         font:17px Georgia,serif;
-        margin:0 0 10px;
+        margin:0 0 0px;
         padding:0 0 10px;
         text-align:left;
     }
 
-    .hoverbox{cursor:default;list-style:none;}
+    .hoverbox{cursor:default;list-style:none;margin: 0 auto;}
     .hoverbox a{cursor:default;}
     .hoverbox a .preview{display:none;}
     .hoverbox a:hover .preview{
