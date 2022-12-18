@@ -9,8 +9,16 @@
 		</style>
 	</head>
  
-	<body>
-		<div id="time"></div>
+	<body onload="time();">
+		<div id="time">
+			<span id="_y">00</span>  
+			<span id="_m">00</span>  
+			<span id="_d">00</span>  
+			<span id="_h">00</span> 
+			<span id="_mn">00</span> 
+			<span id="_s">00</span>
+			<span id="_day">00</span>
+		</div>
 		<script type="text/javascript">
 			function time() {
 				var vWeek, vWeek_s, vDay;
@@ -23,7 +31,17 @@
 				minutes = date.getMinutes();
 				seconds = date.getSeconds();
 				vWeek_s = date.getDay();
-				document.getElementById("time").innerHTML = year + "年" + month + "月" + day + "日" + "\t" + hours + ":" + minutes + ":" + seconds + "\t" + vWeek[vWeek_s];
+				// document.getElementById("time").innerHTML = year + "年" + month + "月" + day + "日" + "\t" + hours + ":" + minutes + ":" + seconds + "\t" + vWeek[vWeek_s];
+				document.getElementById("_y").innerHTML = year+"年";  
+ 				document.getElementById("_m").innerHTML = month+"月";  
+ 				document.getElementById("_d").innerHTML = day+"日\t"; 
+				if(hours<10) document.getElementById("_h").innerHTML = "0"+hours+":";
+ 				else document.getElementById("_h").innerHTML = hours+":";
+				if(minutes<10) document.getElementById("_mn").innerHTML ="0"+minutes+":";
+				else document.getElementById("_mn").innerHTML = minutes+":";
+				if(seconds<10) document.getElementById("_s").innerHTML = "0"+seconds+"\t\t";
+				else document.getElementById("_s").innerHTML = seconds;
+				document.getElementById("_day").innerHTML = "\t\t\t"+vWeek[vWeek_s];
 				setInterval("time()", 1000);
 			};
 			
@@ -31,3 +49,4 @@
 	</body>
  
 </html>
+
