@@ -5,94 +5,51 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" /> -->
   <style type="text/css">
-		.white{
-			font-size: 18px;
-				color: #ffffff;
-				padding: 10px 20px;
-				font-family: 微软雅黑;
-		}
-        .bc{
-            height:80px;
-            width:100%;
-        } 
-        .bd{
-            background: black;
-            height:2000px;
-            font-family: arial,verdana,sans-serif;
-            width: 100%;
-    	    min-width: 1200px;
-        }
-
-        
-        #top{
-          width:100%;
-          height:40px;
-        }
-
-        #menu{position: relative;width:100%;z-index:2}
-        #menu ul{margin:0px;padding:0px;}
-        #submenu{width:100%;height:28px;text-align:center;position: relative;z-index:4}
-        #menu ul li{height:30px;width:80px;list-style: none;float:left;float:left;display:inline;
-        font:0.9em Arial,Helvetica,sans-serif;
-        padding: 0px;margin: 0px;
-        text-align:center;
-        }
-    ul li a{
-        color:#FFF;
-        width:80px;
-        margin:0px;
-        padding:0px 0px 0px 8px;
-        text-decoration:none;
-        display:block;
-        line-height:29px;
-    }
-    ul li .submenu ul li {
-        height:25px;
-    }
-    ul li .submenu ul li a {
-        background:#333;
-    }
-    ul li a:hover{
-        background:#333;
-        border-bottom: 1px dashed #131313;
-    }
-    ul li .submenu{
-        display:none;
-    }
-    .submenu ul li{
-        height:24px;
-        width:110px;
-        list-style:none;
-        float:left;
-        display:inline;
-        font:0.8em Arial,Helvetica,sans-serif;
-        text-align:center;
-        
-    }
-    ul li:hover .submenu{
-        display:block;
-    }
-    ul li .submenu ul li a:hover{
-        background:#333;
-    }
-    .d1{color:black; background:white; width:100px;height:200px;}
-
-    #weather{width:500px;height:40px;background-color: rgb(175, 175, 175);border-left: 20px;color:#ffffff}
-    #left{
-        height:1650px;
-        width:62%;
-        background:white;
-        float:left;
-    }
+    /* 板块大分区 */
+    .bd{background: rgb(0, 0, 0);height:2000px;font-family: arial,verdana,sans-serif;width: 900px;min-width: 1200px;}
+    #top{width:100%;height:40px;}
+    #left{height:1650px;width:62%;background:white;float:left;}
     #middle{height:1650px;width:38%;background:rgb(249, 213, 145);float:left;position: absolute;margin-left: 62%;}
     #zuoxia{height:350px;width:100%;float:left;}
     #all{height:2000px;width:72.5%;float:left;position: absolute;}
     #last{height:200px;width:100%;background-color: #4E79ae;float:left}
     #right{height:2000px;width:27%;background:rgb(52, 48, 48);float:right;margin:10px,0px,0px,0px;}
+    #bc{height:100%;background-color: rgb(175, 175, 175)}
+    .main{position:absolute;background-color: #000;}
+
+
+
+		.white{font-size: 18px;color: #ffffff;padding: 10px 20px;font-family: 微软雅黑;}
+    #top{width:100%;height:40px;}
+
+    /* 头部菜单 */
+    #menu{position: relative;width:100%;z-index:2}
+    #menu ul{margin:0px;padding:0px;}
+    #submenu{width:100%;height:28px;text-align:center;position: relative;z-index:4}
+    #menu ul li{height:30px;width:80px;list-style: none;float:left;float:left;display:inline;
+        font:0.9em Arial,Helvetica,sans-serif;padding: 0px;margin: 0px;text-align:center;}
+    ul li a{color:#FFF;width:80px;margin:0px;padding:0px 0px 0px 8px;text-decoration:none;display:block;line-height:29px;}
+    ul li .submenu ul li {height:25px;}
+    ul li .submenu ul li a {background:#333;}
+    ul li a:hover{background:#333;border-bottom: 1px dashed #131313;}
+    ul li .submenu{display:none;}
+    .submenu ul li{height:24px;width:110px;list-style:none;float:left;display:inline;font:0.8em Arial,Helvetica,sans-serif;
+      text-align:center;}
+    ul li:hover .submenu{display:block;}
+    ul li .submenu ul li a:hover{background:#333;}
+    .d1{color:black; background:white; width:100px;height:200px;}
+
+    /* 头部功能 */
+    #weather{width:500px;height:40px;background-color: rgb(175, 175, 175);border-left: 20px;color:#ffffff;float:right;}
+    #time{width:40%;height:40px;background-color: rgb(175, 175, 175);color:#ffffff;padding-left: 20px;}
+
+    /* 底部条框及功能 */
     #yqlj{width:100%;height:40%;background-color: rgb(99, 99, 99);text-align: left;}
     #banquan{height:60%;width:100%;background-color: rgb(13, 13, 13);text-align: center;}
     #banquan p{text-align: center;margin-top: 10px;}
     #bq{text-align: center;margin-top:50%;}
+
+    /* body中一些无关紧要的class */
     #p1{width:100%;height:30px;}
     .p1g{width:100%;height:50px;}
     #p2{width:100%;height:30px;}
@@ -119,69 +76,51 @@
     #div p{position: absolute;left:10px}
     #p13{color:rgb(210, 183, 133)}
     #p14{text-indent: 2em;color:#000}
-    #f1vedio{height:930px;width:100%;}
-    .t1{height:600px;width:90%;}
-    #t1 td{padding-bottom: 1px;}
+    #f1vedio{height:930px;width:100%;margin:0 auto;}
+    .t1{height:600px;width:90%;margin:0 auto;}
+    #t1 td{padding-bottom: 1px;margin:0 auto;}
     .t2{height:100px;width:100%;}
     .t2 tr td{text-align: right;vertical-align: bottom;}
     #p15{width:95%;height:100px;background-color: aliceblue;margin-top: 200px;}
-      .main{position:absolute;}
     .p19{width:100%;height:100%;text-align: center;line-height: 100px;color: rgb(76, 76, 76);}
     .p18{width:100%;height:100%;text-align:left;line-height: 80px;margin-left: 10px;color: rgb(190, 190, 190);}
+
       /* 滑动条 */
-      * {
-	    margin: 0;
-		  padding: 0;
-	    }
-	  #box {
-		  width: 98%;
-		  height: 180px;
-		  border: 1px solid white;
-		  margin: 1px;
-		  overflow: hidden;
-	  }
-	#content {
-		width: 90%;
-		float: left;
-        color:white;
-        background-color: black;
-      margin-left:10px;
-      margin-top: 10px;
-	}
-	#scroll {
-		width: 20px;
-		height: 99%;
-		float: right;
-		border: 1px solid black;
-		position: relative;
-	}
-	#bar {
-		width: 20px;
-		background-color:white;
-		border-radius: 25px;
-		position: absolute;
-		top: 0;
-	}
-  #if1{width:100%;height:400px;border:none;margin-top: 30px;}
-  #if2{width:100%;height:630px;border:none;margin-top: 50px;padding:0px}
-  #calendar{width:100%;height:250px;}
-  #hover1{width:120%;height:102%;padding: 0px;margin:0px;border: none;}
-  #test8{width:100%;height:330px;margin-top: 80px;border:none;padding:0px;}
-  #test9{width:98%;height:500px;border:none;padding:none;}
+      * {margin: 0;padding: 0;}
+	  #box {width: 98%;height: 180px;border: 1px solid white;margin: 1px;overflow: hidden;}
+    #content {width: 90%;float: left;color:white;background-color: black;margin-left:10px;margin-top: 10px;}
+    #scroll {width: 20px;height: 99%;float: right;border: 1px solid black;position: relative;}
+    #bar {width: 20px;background-color:white;border-radius: 25px;position: absolute;top: 0;}
+
+    /* 导入框总集 */
+    /* 右侧两个表格导入 */
+    #if1{width:100%;height:400px;border:none;margin-top: 30px;}
+    #if2{width:100%;height:630px;border:none;margin-top: 50px;padding:0px}
+    /* 左下灯箱画廊外框大小 */
+    #hover1{width:100%;height:102%;padding: 0px;margin:0 auto;border: none;}
+    /*  右下图集外框大小*/
+    #test8{width:100%;height:330px;margin-top: 80px;border:none;padding:0px;}
+    /* 右侧评论区外框大小 */
+    #test9{width:98%;height:500px;border:none;padding:none;}
+    /* 左上图片自动轮播 */
+    .test12{width:150%;height:310px;border:none;margin-top: 5px;;}
+
+    #calendar{width:100%;height:250px;}
+
+  /* 倒计时 */
   #daojishi{background-color: #000;text-align: center;}
   #daojishi1{border:none;padding:none;;margin-top: 20px;margin-left: 40px;}
+
   .y1{background-color:#000;width:100%;height:30px;margin-top: 5px;}
   .shuaxin{color:white;float:left;width:20%;margin-left: 10px;}
   .puma{color:white;float:right;width:50%;}
-  #weather{width:500px;height:40px;background-color: rgb(175, 175, 175);border-left: 20px;color:#ffffff;float:right;}
-  #time{width:40%;height:40px;background-color: rgb(175, 175, 175);color:#ffffff;padding-left: 20px;}
-  #bc{height:100%;background-color: rgb(175, 175, 175)}
-  .test12{width:150%;height:310px;border:none;}
-  a{
-    text-decoration: none;}
-    a:hover{TEXT-DECORATION:underline}
+  /* 鼠标经过超链接时下划线显形 */
+  a{text-decoration: none;}
+  a:hover{TEXT-DECORATION:underline;color:green;}
+  
   </style>
 
+  <!-- 彩蛋 -->
     <script type="text/javascript">
       function box(){alert("恭喜你发现了它~")}
     </script>
@@ -192,11 +131,13 @@
           <div class="main">
             <div>
             <div id="bc" class=""> 
+              <!-- 头部功能区 -->
               <div id="weather">
               <iframe width="500" height="40" frameborder="0" scrolling="no" hspace="0" src="https://i.tianqi.com/?c=code&a=getcode&id=40&icon=1"></iframe>
             </div>
             <div id="time"><iframe width="500" height="40" frameborder="0" scrolling="no" hspace="0"src="text11.html"></iframe></div>
           </div>
+          <!-- 头部菜单 -->
             <div id="top">
                 <div id="menu">
                   <div id="submenu">
@@ -229,10 +170,16 @@
                 </div>
               </div>
             </div>
+
+            <!-- 正文 -->
           <div id="passage" class="">
-            <div id="all" class="">
+            <!-- 左侧和中间的大盒子在all盒子中，all盒子与右大盒子为同一层 -->
+          <div id="all" class="">
+            <!-- 左侧板块 -->
            <div id="left" class="">
+            <!-- 左上滑动图片展示 -->
             <iframe src="test12.html" class="test12"></iframe>
+            <!-- 左上新闻栏 -->
               <div id="angry" class="">
                 <h3 class="p9">F1上海站版《元首的愤怒》</h3>
                 <p id="p7">这是根据被无数题材恶搞无数次的《帝国的毁灭》电影片段制作的恶搞小短片，这次的受害者是红牛。是的，克里斯蒂安-霍纳，你中奖了，就在2011年的上海GP |<b class="p10">生日快乐，菲利普</b>
@@ -250,9 +197,10 @@
                        <div id="p12"><a href="https://baike.baidu.com/item/%E5%B7%B4%E7%89%B9%E5%B0%94/7560989" id="p12"><img src="F1赛车/play.gif">巴顿占了维特尔的坑</a></div>
                    </div>
                 </div>
+                <!-- f1制造栏新闻 -->
               <div id="hellof1">
-                 <div style="position: relative; width: 170px; height: 40px;margin-top: 20px;">
-                  <img src="F1赛车/f_01.jpg" width="600" height="30" alt="">
+                 <div style="position: relative; width: 100%; height: 40px;margin-top: 20px;">
+                  <img src="F1赛车/f_01.jpg" width="100%" height="30" alt="">
                   <a href="#"><span style="position: absolute; top: 3px; left: 30px;color:#ffffff;">HelloF1制造</span></a>
                   </div> 
                   <div>
@@ -279,9 +227,10 @@
                       <td colspan="2"><hr style="border:1px dashed #000; height:1px;margin:10px;"></td>
                     </table>
                   </div>
-                  
-                  <div style="position: relative; width: 170px; height: 40px;margin-top: 20px;">
-                    <img src="F1赛车/f_01.jpg" width="600" height="30" alt="">
+
+                  <!-- 极品飞车板块 -->
+                  <div style="position: relative; width: 100%; height: 40px;margin-top: 20px;">
+                    <img src="F1赛车/f_01.jpg" width="100%" height="30" alt="">
                     <a href="#"><span style="position: absolute; top: 3px; left: 30px;color:#ffffff;">极品飞车</span></a>
                   </div>
                   <div>
@@ -299,8 +248,8 @@
                     </table>
                   </div>
 
-                    <div style="position: relative; width: 170px; height: 40px;margin-top: 20px;">
-                      <img src="F1赛车/f_01.jpg" width="600" height="30" alt="">
+                    <div style="position: relative; width: 100%; height: 40px;margin-top: 20px;">
+                      <img src="F1赛车/f_01.jpg" width="100%" height="30" alt="">
                       <a href="#"><span style="position: absolute; top: 3px; left: 30px;color:#ffffff;">车友交流</span></a>
                     </div> 
                     <div>
@@ -316,9 +265,10 @@
               <div id="jpfc"></div>
               <div id="communi"></div>
             </div>
+            <!-- 中部大板块 -->
             <div id="middle" class="">
-              <div style="position: relative; width: 170px; height: 40px;margin-top: 10px;margin-left: 5px;">
-                <img src="F1赛车/f_06.jpg" width="365" height="30" alt="">
+              <div style="position: relative; width: 100%; height: 40px;margin-top: 10px;margin-left: 5px;">
+                <img src="F1赛车/f_06.jpg" width="98%" height="30" alt="">
                 <a href="#"><span style="position: absolute; top: 3px; left: 30px;color:#ffffff;">F1新闻与流言</span></a>
                 </div> 
               <div id="f1news">
@@ -337,49 +287,50 @@
                 <p align="center">
                   <a href="#"><b id="p6">查看更多F1新闻流言</b></a><b id="p7">|</b><a href="#"><b id="p7">加入收藏夹</b></a>
               </div>
+              <!-- 中部图片箱，图片大小改成100%才能使放缩时不乱飞-->
               <div id="p2">
-                <div style="position: relative; width: 170px; height: 40px;margin-top: 20px;margin-left: 5px;">
-                  <img src="F1赛车/f_06.jpg" width="365" height="30" alt="">
+                <div style="position: relative; width: 100%; height: 40px;margin-top: 20px;margin-left: 5px;">
+                  <img src="F1赛车/f_06.jpg" width="98%" height="30" alt="">
                   <a href="#"><span style="position: absolute; top: 3px; left: 30px;color:#ffffff;">F1视频</span></a>
                   </div> 
               </div>
               <div id="f1vedio">
                 <table style="margin-left: 20px;" class="t1">
                   <tr>
-                    <td><img src="F1赛车/5391.jpg" width="170" height="100"></td>
-                    <td><img src="F1赛车/5390.jpg" width="170" height="100"></td>
+                    <td><img src="F1赛车/5391.jpg" width="100%" height="100"></td>
+                    <td><img src="F1赛车/5390.jpg" width="100%" height="100"></td>
                   </tr>
                   <tr>
                     <td><a href="#"><p class="p10">德语电台ServusTV全程记录Vettel夺冠后的行程</p></a></td>
                     <td><a href="#"><p class="p10">米卡、舒马赫、足球皇帝奔驰广告(德语版)</p></a></td>
                   </tr>
                   <tr>
-                    <td><img src="F1赛车/5389.jpg"width="170" height="100"></td>
-                    <td><img src="F1赛车/5201.jpg"width="170" height="100"></td>
+                    <td><img src="F1赛车/5389.jpg"width="100%" height="100"></td>
+                    <td><img src="F1赛车/5201.jpg"width="100%" height="100"></td>
                   </tr>
                   <tr>
                     <td><a href="#"><p class="p10">揭秘迈凯轮Misson Control中心</p></a></td>
                     <td><a href="#"><p class="p10">Schumi-Vettel Interview含舒马赫与瓦特尔接受采访第二部分</p></a></td>
                   </tr>
                   <tr>
-                    <td><img src="F1赛车/5200.jpg"width="170" height="100"></td>
-                    <td><img src="F1赛车/5198.jpg"width="170" height="100"></td>
+                    <td><img src="F1赛车/5200.jpg"width="100%" height="100"></td>
+                    <td><img src="F1赛车/5198.jpg"width="100%" height="100"></td>
                   </tr>
                   <tr>
                     <td><a href="#"><p class="p10">Schumi-Vettel Interview舒马赫与瓦特尔接受采访第一部分</p></a></td>
                     <td><a href="#"><p class="p10">汉密尔顿跟纳斯卡冠军Tony Stewart换车开</p></a></td>
                   </tr>
                   <tr>
-                    <td><img src="F1赛车/5197.jpg"width="170" height="100"></td>
-                    <td><img src="F1赛车/5196.jpg"width="170" height="100"></td>
+                    <td><img src="F1赛车/5197.jpg"width="100%" height="100"></td>
+                    <td><img src="F1赛车/5196.jpg"width="100%" height="100"></td>
                   </tr>
                   <tr>
                     <td><a href="#"><p class="p10">2011WRC约旦站杨浩中文解说三天精华集锦</p></a></td>
                     <td><a href="#"><p class="p10">F1中国大奖赛·上BBC720P超清</p></a></td>
                   </tr>
                   <tr>
-                    <td><img src="F1赛车/5195.jpg"width="170" height="100"></td>
-                    <td><img src="F1赛车/5194.jpg"width="170" height="100"></td>
+                    <td><img src="F1赛车/5195.jpg"width="100%" height="100"></td>
+                    <td><img src="F1赛车/5194.jpg"width="100%" height="100"></td>
                   </tr>
                   <tr>
                     <td><a href="#"><p class="p10">F1中国大奖赛·下 BBC720P超清</p></a></td>
@@ -391,21 +342,25 @@
                 </p>
               </div>
               <div id="f1vote">
-                <div style="position: absolute; width: 100px; height: 40px;margin-top: 0px;margin-left: 5px;">
-                  <img src="F1赛车/f_06.jpg" width="364" height="35" alt="">
+                <div style="position: absolute; width: 100%; height: 40px;margin-top: 0px;margin-left: 5px;">
+                  <img src="F1赛车/f_06.jpg" width="98%" height="35" alt="">
                   <a href="#">
                   <span style="position: absolute; top: 5px; left: 30px;color:#ffffff;">投票</span></a>
                   </div> 
               </div>
             </div>
+            <!-- 左下横版（灯箱） -->
             <div id="zuoxia" class="">
               <iframe id="hover1" src="test13.html" ></iframe>
             </div>
           </div>
+          <!-- 右侧大板块 -->
             <div id="right" class="">
               <div id="p1"><img src="F1赛车/453e9e12ae11e3aa6d3cae0eab58d11e.jpg" class="p1g"></div>
+              <!-- 倒计时 -->
               <div id="puma">
                 <div class="'daojishi"><iframe id="daojishi1" src="test10.html"></iframe></div>
+                <!-- 评论区 -->
                 <div id="fy">
                 <div id="box">
                   <div id="content">
@@ -428,11 +383,12 @@
                       <p>-</p>
                       <p>-</p>
                       <p>>-现在是什么时候？</p></div>
-                  </div>
+                    </div>
                   <div id="scroll">
                     <div id="bar"></div>
                   </div>
                 </div>
+                <!-- 评论区滑动条实现的js -->
                 <script>
                   var oBox = document.getElementById("box");
                   var oCon = document.getElementById("content");
@@ -466,25 +422,27 @@
                 </script>
             </div>
             <div class="y1"><a href="#"><div class="shuaxin">刷新</div></a><div class="puma">Puma上海站现场播报</div></div>
-            <div style="position: absolute; width: 170px; height: 40px;margin-top: 10px;margin-left: 10px;">
-              <img src="F1赛车/f_07.jpg" width="350" height="30" alt="">
+            <div style="position: absolute; width: 26%; height: 40px;margin-top: 10px;margin-left: 10px;">
+              <img src="F1赛车/f_07.jpg" width="100%" height="30" alt="">
               <a href="#"><span style="position: absolute; top: 3px; left: 10px;color:#ffffff;">2011 F1日历</span></a>
             </div>
+            <!-- 引用的赛程表 -->
               <div class="calendar">
                 <iframe id="if2" src="test1.html"></iframe>
                 </div>
-                <div style="position: absolute; width: 170px; height: 40px;margin-top: 0px;margin-left: 10px;">
-                  <img src="F1赛车/f_07.jpg" width="350" height="30" alt="">
+                <div style="position: absolute; width: 26%; height: 40px;margin-top: 0px;margin-left: 10px;">
+                  <img src="F1赛车/f_07.jpg" width="100%" height="30" alt="">
                   <a href="#"><span style="position: absolute; top: 3px; left: 10px;color:#ffffff;">F1积分榜</span></a>
               </div>
               <div id="score">
                 <iframe id="if1" src="test2.html"></iframe>
               </div>
               <div class="">
-                <div style="position: absolute; width: 170px; height: 40px;margin-top: 65px;margin-left: 10px;">
-                  <img src="F1赛车/f_07.jpg" width="350" height="30" alt="">
+                <div style="position: absolute; width: 26%; height: 40px;margin-top: 65px;margin-left: 10px;">
+                  <img src="F1赛车/f_07.jpg" width="100%" height="30" alt="">
                   <a href="#"><span style="position: absolute; top: 3px; left: 10px;color:#ffffff;">最新赛车图鉴</span></a>
               </div>
+              <!-- 图表（无特殊功能） -->
               <div id="weekend">
               <iframe id="test8" src="test8.html"></iframe>
               </div>
@@ -492,6 +450,7 @@
               </div>
               </div>
             </div>
+            <!-- 底部板块 -->
               <div id="last" class="">
                 <div id="yqlj" class="">
                   <div class="p18">友情链接： <a href="#" class="p18">F1 官网</a>  <a href="#" class="p18">赛车运动</a>   <a href="#" class="p18">上赛场官网</a>   <a href="#" class="p18">赛车爱好者</a>  <a href="#" class="p18">WRC之家</a>   <a href="#" class="p18">名车志中文网</a>  <a href="#" class="p18">M.Schumacher之家</a>   <a href="#" class="p18">我友体育</a></div>
