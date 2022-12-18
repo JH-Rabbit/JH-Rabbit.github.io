@@ -23,8 +23,13 @@
 				minutes = date.getMinutes();
 				seconds = date.getSeconds();
 				vWeek_s = date.getDay();
-				document.getElementById("time").innerHTML = year + "年" + month + "月" + day + "日" + "\t" + hours + ":" + minutes + ":" + seconds + "\t" + vWeek[vWeek_s];
- 
+				document.getElementById("time").innerHTML = year + "年" + month + "月" + day + "日";
+				if(hours>=10) document.getElementById("time").innerHTML += "\t" + hours ;
+				else document.getElementById("time").innerHTML += "\t" + "0"+hours ;
+				if(minutes>=10) document.getElementById("time").innerHTML += ":" + minutes ;
+				else document.getElementById("time").innerHTML += ":" + "0" +minutes ;
+				if(seconds>=10)document.getElementById("time").innerHTML += ":" + seconds + "\t" + vWeek[vWeek_s];
+				else document.getElementById("time").innerHTML += ":" + "0" + seconds + "\t" + vWeek[vWeek_s];
 			};
 			setInterval("time()", 1000);
 		</script>
